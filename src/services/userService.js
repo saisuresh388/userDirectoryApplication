@@ -28,7 +28,7 @@ const findByTitle = (title) => {
   return http.get(`/users?title=${title}`);
 };
 
-export default {
+const userService = {
   getAll,
   get,
   create,
@@ -37,3 +37,4 @@ export default {
   removeAll,
   findByTitle,
 };
+export default userService;
