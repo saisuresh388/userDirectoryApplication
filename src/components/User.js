@@ -4,7 +4,10 @@ import UserDataService from "../services/userService";
 const User = (props) => {
   const initialUserState = {
     id: null,
-    title: "",
+    fullName: "",
+    country: "",
+    dob: "",
+    email: "",
     description: "",
     published: false,
   };
@@ -34,7 +37,7 @@ const User = (props) => {
   const updatePublished = (status) => {
     var data = {
       id: currentUser.id,
-      title: currentUser.title,
+      fullName: currentUser.fullName,
       description: currentUser.description,
       published: status,
     };
@@ -78,13 +81,13 @@ const User = (props) => {
           <h4>User</h4>
           <form>
             <div className="form-group">
-              <label htmlFor="title">Title</label>
+              <label htmlFor="fullName">Title</label>
               <input
                 type="text"
                 className="form-control"
-                id="title"
-                name="title"
-                value={currentUser.title}
+                id="fullName"
+                name="fullName"
+                value={currentUser.fullName}
                 onChange={handleInputChange}
               />
             </div>
